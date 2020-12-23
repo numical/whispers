@@ -1,6 +1,6 @@
 {
   "name": "whispers",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,9 @@
     "test": "tap src/**/*.test.js test/**/*.test.js  --100",
     "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["gcp", "cloud function"],
+  "author": "mike.evans@numical.com",
+  "license": "None",
   "devDependencies": {
     "prettier": "^2.2.1",
     "tap": "^14.11.0",

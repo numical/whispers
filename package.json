@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "prettier --write src/**/*.js",
-    "test": "tap src/**/*.test.js cloud-function/**/*.test.js  --100"
+    "test": "tap src/**/*.test.js test/**/*.test.js  --100",
+    "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2"
   },
   "keywords": [],
   "author": "",

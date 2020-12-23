@@ -1,6 +1,6 @@
 const { test } = require("tap");
 const td = require("testdouble");
-const { playGame } = require("./index");
+const { playGame } = require("../index");
 
 test("play game", (t) => {
   const req = {};

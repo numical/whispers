@@ -6,6 +6,7 @@ gcloud config set project numical-whispers
 gcloud services enable cloudfunctions.googleapis.com  
 gcloud services enable cloudbuild.googleapis.com
 gcloud services enable compute.googleapis.com  << not necessary
+gcloud services enable texttospeech.googleapis.com
 gsutil mb -l europe-west2 -b on gs://whispers-audio-files
 gsutil iam ch allUsers:objectViewer gs://whispers-audio-files
 ````

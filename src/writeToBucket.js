@@ -4,7 +4,7 @@ const { Storage } = require("@google-cloud/storage");
 const storage = new Storage();
 const bucket = storage.bucket("whispers-audio-files");
 
-const writeFileToBucket = (fileName, contents) =>
+module.exports = (fileName, contents) =>
   new Promise((resolve, reject) => {
     const input = Readable.from([contents]);
     const file = bucket.file(fileName);
@@ -18,7 +18,3 @@ const writeFileToBucket = (fileName, contents) =>
       reject(err);
     });
   });
-
-module.exports = {
-  writeFileToBucket,
-};

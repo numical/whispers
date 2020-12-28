@@ -1,24 +1,24 @@
 const { test } = require("tap");
 const td = require("testdouble");
 
-const bucket = td.replace("./bucket");
+const writeToBucket = td.replace("./writeToBucket");
+const convertToAudio = td.replace("./convertToAudio");
 const { playGame } = require("./whisper");
 
 test("play game successfully", async (t) => {
+  const audio = [];
   const req = {};
   const res = {
     send: td.func(),
   };
   td.when(
-    bucket.writeFileToBucket(
-      "testGameId1.txt",
-      "Played game 'testGameId1' of Whispers."
-    )
-  ).thenResolve(Promise.resolve("testUrl"));
+    convertToAudio("round the rugged rock the ragged rascal ran")
+  ).thenResolve(audio);
+  td.when(writeToBucket("testGameId1.mp3", audio)).thenResolve("testUrl");
   await playGame(req, res, "testGameId1");
   td.verify(
     res.send(
-      `<html><body>Result of game stored in file <a href="testUrl">testGameId1.txt</a></body></html>`
+      `<html><body>Audio output of game stored in file <a href="testUrl">testGameId1.mp3</a></body></html>`
     )
   );
   t.end();
@@ -31,10 +31,7 @@ test("play game but errors", async (t) => {
     json: td.func(),
   };
   td.when(
-    bucket.writeFileToBucket(
-      "testGameId2.txt",
-      "Played game 'testGameId2' of Whispers."
-    )
+    convertToAudio("round the rugged rock the ragged rascal ran")
   ).thenReject(new Error());
   await playGame(req, res, "testGameId2");
   td.verify(res.status(500));

@@ -1,15 +1,17 @@
 const { Readable } = require("stream");
 const { Storage } = require("@google-cloud/storage");
 const { v4: uuid } = require("uuid");
-const { writeFileToBucket } = require("./bucket");
+const writeToBucket = require("./writeToBucket");
+const convertToAudio = require("./convertToAudio");
 
 const playGame = async (req, res, gameId = uuid()) => {
   try {
-    const contents = `Played game '${gameId}' of Whispers.`;
-    const fileName = `${gameId}.txt`;
-    const url = await writeFileToBucket(fileName, contents);
+    const text = "round the rugged rock the ragged rascal ran";
+    const audio = await convertToAudio(text);
+    const fileName = `${gameId}.mp3`;
+    const url = await writeToBucket(fileName, audio);
     res.send(
-      `<html><body>Result of game stored in file <a href="${url}">${fileName}</a></body></html>`
+      `<html><body>Audio output of game stored in file <a href="${url}">${fileName}</a></body></html>`
     );
   } catch (err) {
     res.status(500);

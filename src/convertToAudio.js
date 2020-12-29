@@ -4,7 +4,7 @@ const client = new textToSpeech.TextToSpeechClient();
 
 const templateRequest = {
   voice: { languageCode: "en-US", ssmlGender: "NEUTRAL" },
-  audioConfig: { audioEncoding: "MP3" },
+  audioConfig: { audioEncoding: "LINEAR16", sampleRateHertz: 16000 },
 };
 
 module.exports = async (text) => {

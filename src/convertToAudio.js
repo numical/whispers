@@ -2,14 +2,10 @@ const textToSpeech = require("@google-cloud/text-to-speech");
 
 const client = new textToSpeech.TextToSpeechClient();
 
-const templateRequest = {
-  voice: { languageCode: "en-US", ssmlGender: "NEUTRAL" },
-  audioConfig: { audioEncoding: "LINEAR16", sampleRateHertz: 16000 },
-};
-
-module.exports = async (text) => {
+module.exports = async (text, voice) => {
   const request = {
-    ...templateRequest,
+    voice,
+    audioConfig: { audioEncoding: "LINEAR16", sampleRateHertz: 24000 },
     input: { text },
   };
   const [response] = await client.synthesizeSpeech(request);

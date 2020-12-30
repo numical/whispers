@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "prettier --write src/**/*.js",
     "test": "tap src/**/*.test.js --no-coverage",
-    "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2"
+    "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
+    "deploy:listVoices": "gcloud functions deploy listVoices --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2"
   },
   "keywords": [
     "gcp",

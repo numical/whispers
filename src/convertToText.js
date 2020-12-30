@@ -2,19 +2,15 @@ const speech = require("@google-cloud/speech");
 
 const client = new speech.SpeechClient();
 
-const templateRequest = {
-  config: {
-    enableAutomaticPunctuation: true,
-    encoding: "LINEAR16",
-    languageCode: "en-US",
-    model: "default",
-    sampleRateHertz: 16000,
-  },
-};
-
 module.exports = async (audio) => {
   const request = {
-    ...templateRequest,
+    config: {
+      enableAutomaticPunctuation: true,
+      encoding: "LINEAR16",
+      languageCode: "en-US",
+      model: "default",
+      sampleRateHertz: 24000,
+    },
     audio: {
       content: audio,
     },

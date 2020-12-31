@@ -25,6 +25,7 @@ Discovering how to run Node.js.
 #### Params
 * https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5
 * https://europe-west2-numical-whispers.cloudfunctions.net/playGame?text=She%20sells%20sea%20shells%20on%20the%20sea%20shore
+* https://europe-west2-numical-whispers.cloudfunctions.net/playGame?voice=english
 * https://europe-west2-numical-whispers.cloudfunctions.net/playGame?voice=random
 #### All Together
 * https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
@@ -62,6 +63,11 @@ https://github.com/numical/whispers/
     * insanely cheap but inefficient
   * solution?
     * https://www.nearform.com/blog/solving-the-serverless-concurrency-problem-with-google-cloud-run/
+
+### Next Steps
+* evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
+* ? use [metrics API](https://cloud.google.com/functions/docs/monitoring/metrics) to assess inefficiency of app
+
 
 ## Cloud Run
 ... TBD

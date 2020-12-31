@@ -27,6 +27,8 @@ const roundTrip = (gameId) => async (iteration, text, voiceName) => {
   const voice =
     voiceName === "random"
       ? await randomVoice()
+      : voiceName === "english"
+      ? await randomEnglishVoice()
       : { ...defaultVoice, name: voiceName };
   const spokenText = await convertToAudio(text, voice);
   const fileName =
@@ -44,6 +46,13 @@ const randomVoice = async () => {
   const voices = await getVoices();
   const randomIndex = Math.floor(Math.random() * voices.length);
   return voices[randomIndex];
+};
+
+const randomEnglishVoice = async () => {
+  const voices = await getVoices();
+  const englishVoices = voices.filter((voice) => voice.name.startsWith("en"));
+  const randomIndex = Math.floor(Math.random() * englishVoices.length);
+  return englishVoices[randomIndex];
 };
 
 const buildHTML = (gameId, results) => {

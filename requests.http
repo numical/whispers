@@ -1,0 +1,23 @@
+GET https://europe-west2-numical-whispers.cloudfunctions.net/playGame
+Accept: application/xhtml+xml
+###
+
+GET https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5
+Accept: application/xhtml+xml
+###
+
+GET https://europe-west2-numical-whispers.cloudfunctions.net/playGame?text=She%20sells%20sea%20shells%20on%20the%20sea%20shore
+Accept: application/xhtml+xml
+###
+
+GET https://europe-west2-numical-whispers.cloudfunctions.net/playGame?voice=english
+Accept: application/xhtml+xml
+###
+
+GET https://europe-west2-numical-whispers.cloudfunctions.net/playGame?voice=random
+Accept: application/xhtml+xml
+###
+
+GET https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
+Accept: application/xhtml+xml
+###

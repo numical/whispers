@@ -25,6 +25,3 @@ Funnies:
 ````
 gcloud functions delete playGame --region=europe-west2
 ````
-
-## Git Tags
-* 01_trivial_cloud_function

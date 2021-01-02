@@ -98,10 +98,12 @@ https://github.com/numical/whispers/
     * solution?
         * https://www.nearform.com/blog/solving-the-serverless-concurrency-problem-with-google-cloud-run/
 
-### Next Steps
+### Possible Next Steps
 
 * evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
-* ? use [metrics API](https://cloud.google.com/functions/docs/monitoring/metrics) to assess inefficiency of app
+* use [Google secrets](https://cloud.google.com/secret-manager) for configuration
+* understand connection details when using Cloud SQL etc.
+
 
 ## Cloud Run
 

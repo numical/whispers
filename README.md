@@ -73,6 +73,14 @@ https://github.com/numical/whispers/
 4. [04_audio_to_text](https://github.com/numical/whispers/releases/tag/04_audio_to_text)
 5. [05_parametrised_plus_international](https://github.com/numical/whispers/releases/tag/05_parametrised_plus_international)
 6. [06-add-timings](https://github.com/numical/whispers/releases/tag/06_add_timings)
+7. [07-use-functions-framework-for-local-run](https://github.com/numical/whispers/releases/tag/07-use-functions-framework-for-local-run)
+
+### Possible Next Steps
+
+* evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
+* use [Google secrets](https://cloud.google.com/secret-manager) for configuration
+* understand connection details when using Cloud SQL etc.
+
 
 ### Conclusions
 
@@ -99,14 +107,7 @@ https://github.com/numical/whispers/
         * insanely cheap but inefficient
     * solution?
         * https://www.nearform.com/blog/solving-the-serverless-concurrency-problem-with-google-cloud-run/
-
-### Possible Next Steps
-
-* evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
-* use [Google secrets](https://cloud.google.com/secret-manager) for configuration
-* understand connection details when using Cloud SQL etc.
-
-
+    
 ## Cloud Run
 
 ... TBD

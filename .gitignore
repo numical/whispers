@@ -105,3 +105,6 @@ dist
 
 # Webstorm
 .idea
+
+# Authentication keys
+auth

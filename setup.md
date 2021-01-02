@@ -21,6 +21,11 @@ Funnies:
 * `--source` must be *root* of all local files, no peer sources allowed;
 * main file must be `index.js` (ignore docs that say `function.js` also possible - this errors)
 
+## Create service account key
+```
+gcloud iam service-accounts keys create ./auth/numical-whispers-key.json --iam-account=numical-whispers@appspot.gserviceaccount.com
+```
+
 ## Delete function
 ````
 gcloud functions delete playGame --region=europe-west2

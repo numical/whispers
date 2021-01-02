@@ -1,7 +1,8 @@
 # whispers
 
 A Google Cloud Platform (GCP) Playground  
-Discovering how to run Node.js.
+Discovering how to run Node.js.  
+The party game 'Chinese Whispers' with Google's speech API's.
 
 ## Options
 
@@ -71,6 +72,7 @@ https://github.com/numical/whispers/
 3. [03_create_audio_file](https://github.com/numical/whispers/releases/tag/03_create_audio_file)
 4. [04_audio_to_text](https://github.com/numical/whispers/releases/tag/04_audio_to_text)
 5. [05_parametrised_plus_international](https://github.com/numical/whispers/releases/tag/05_parametrised_plus_international)
+6. [06-add-timings](https://github.com/numical/whispers/releases/tag/06_add_timings)
 
 ### Conclusions
 

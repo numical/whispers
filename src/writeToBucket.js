@@ -1,7 +1,7 @@
 const { Readable } = require("stream");
 const { Storage } = require("@google-cloud/storage");
 
-const bucketName = "whispers-audio-files";
+const bucketName = "numical-telephone-audio-files";
 
 const storage = new Storage();
 const bucket = storage.bucket(bucketName);

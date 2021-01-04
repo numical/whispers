@@ -2,7 +2,7 @@
 
 A Google Cloud Platform (GCP) Playground  
 Discovering how to run Node.js.  
-The party game 'Chinese Whispers' with Google's speech API's.
+The party game '[Chinese Whispers](https://en.wikipedia.org/wiki/Telephone_(game))' (in the US, 'telephone') with Google's speech API's.
 
 ## Options
 
@@ -50,18 +50,18 @@ sequenceDiagram
 
 #### Base
 
-* https://europe-west2-numical-whispers.cloudfunctions.net/playGame
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame
 
 #### Params
 
-* https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5
-* https://europe-west2-numical-whispers.cloudfunctions.net/playGame?text=She%20sells%20sea%20shells%20on%20the%20sea%20shore
-* https://europe-west2-numical-whispers.cloudfunctions.net/playGame?voice=english
-* https://europe-west2-numical-whispers.cloudfunctions.net/playGame?voice=random
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?iterations=5
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?text=She%20sells%20sea%20shells%20on%20the%20sea%20shore
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?voice=english
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?voice=random
 
 #### All Together
 
-* https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
 
 ### Source
 * gcp: [setup](./docs/setup.md);

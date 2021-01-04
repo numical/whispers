@@ -2,16 +2,22 @@
 
 ## Set up project
 ````
-gcloud config set project numical-whispers  
+gcloud auth login
+gcloud projects create {project-name} --organization=379324684039
+gcloud beta billing projects link {project-name}--billing-account={billing-account-id}
+gcloud config set project {project-name}
 gcloud services list --available
 gcloud services enable cloudfunctions.googleapis.com  
 gcloud services enable cloudbuild.googleapis.com
-gcloud services enable compute.googleapis.com  << not necessary
 gcloud services enable texttospeech.googleapis.com
 gcloud services enable speech.googleapis.com
-gsutil mb -l europe-west2 -b on gs://whispers-audio-files
-gsutil iam ch allUsers:objectViewer gs://whispers-audio-files
+gsutil mb -l europe-west2 -b on gs://{bucket-name}
+gsutil iam ch allUsers:objectViewer gs://{bucket-name}
 ````
+
+gcloud beta billing projects link numical-telephone --billing-account=0118EE-C0AC1A-AB5E21
+
+
 
 ## Export function
 ````
@@ -23,7 +29,7 @@ Funnies:
 
 ## Create service account key
 ```
-gcloud iam service-accounts keys create ./auth/numical-whispers-key.json --iam-account=numical-whispers@appspot.gserviceaccount.com
+gcloud iam service-accounts keys create ./auth/whispers-key.json --iam-account={project-name}@appspot.gserviceaccount.com
 ```
 
 ## Delete function

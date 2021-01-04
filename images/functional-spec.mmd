@@ -1,0 +1,15 @@
+sequenceDiagram
+    User->>Firewall / Load Balancer: /playGame?xxx
+    Firewall / Load Balancer->>Worker: /playGame?xxx
+    activate Worker
+    loop number of iterations
+    Worker->>Text to Speech API: synthesizeSpeech(text)
+    Text to Speech API-->>Worker: audio
+    par
+    Worker->>Bucket: write(audio)
+    Worker->>Speech API: recognize(audio)
+    Speech API-->>Worker: text
+    end
+    end
+    Worker-->>User: html
+    deactivate Worker

@@ -9,7 +9,8 @@
     "listVoices": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/numical-whispers-key.json && npx @google-cloud/functions-framework --target=listVoices",
     "playGame": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/numical-whispers-key.json && npx @google-cloud/functions-framework --target=playGame",
     "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
-    "deploy:listVoices": "gcloud functions deploy listVoices --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2"
+    "deploy:listVoices": "gcloud functions deploy listVoices --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
+    "draw": "npx mmdc -i ./images/functional-spec.mmd -o ./images/functional-spec.png"
   },
   "keywords": [
     "gcp",
@@ -19,6 +20,7 @@
   "license": "None",
   "devDependencies": {
     "@google-cloud/functions-framework": "^1.7.1",
+    "mermaid.cli": "^0.5.1",
     "prettier": "^2.2.1",
     "tap": "^14.11.0",
     "testdouble": "^3.16.1"

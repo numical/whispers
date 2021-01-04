@@ -24,6 +24,7 @@ The party game 'Chinese Whispers' with Google's speech API's.
 * also https://cloud.google.com/serverless-options/   
   
 ## Function Spec
+(Generated with [mermaid.js](https://mermaid-js.github.io/mermaid/#/) - if you see markdown rather than a diagram, [click here](./images/functional-spec.png))
 ```mermaid
 sequenceDiagram
     autonumber
@@ -63,8 +64,8 @@ sequenceDiagram
 * https://europe-west2-numical-whispers.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
 
 ### Source
-
-https://github.com/numical/whispers/
+* gcp: [setup](./docs/setup.md);
+* javascript: https://github.com/numical/whispers/
 
 #### History (tags)
 
@@ -106,7 +107,7 @@ https://github.com/numical/whispers/
 
 ### Possible Next Steps
 
-* evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
+* use [Cloud Tasks](https://cloud.google.com/tasks) for bucket writes to shorten response *if* they are critical path
 * use [Google secrets](https://cloud.google.com/secret-manager) for configuration
 * use [Cloud Endpoint](  https://cloud.google.com/endpoints/docs/openapi/get-started-cloud-functions) for custom domain
 * understand connection details when using Cloud SQL etc.

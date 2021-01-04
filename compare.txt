@@ -1,2 +1,0 @@
-`("<html><body><p>Game testGameId1</p><p>Iteration 1</p><p>Initial text is 'Round the rugged rock the ragged rascal ran.'.</p><p>Spoken text is <audio controls><source src=\"testUrl\"></audio></p><p>Heard text is 'Round the rugged rock the ragged rascal ran.'</p></body></html>")`
-`("<html><body><p>Game testGameId1</p><p>Iteration 1</p><p>Initial text is 'Round the rugged rock the ragged rascal ran.'.</p><p>Spoken text is <audio controls><source src=\"undefined\"></audio></p><p>Heard text is 'Round the rugged rock the ragged rascal ran.'</p></body></html>")`.

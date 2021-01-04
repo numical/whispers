@@ -11,9 +11,11 @@ module.exports = (fileName, contents) =>
     const input = Readable.from([contents]);
     const file = bucket.file(`${fileName}.wav`);
     const output = file.createWriteStream({ contentType: "audio/L16" });
+    const start = Date.now();
     input.pipe(output);
 
     input.on("end", () => {
+      console.log(`Elapsed bucket write time: ${Date.now() - start} ms.`);
       resolve(file.publicUrl());
     });
     input.on("error", (err) => {

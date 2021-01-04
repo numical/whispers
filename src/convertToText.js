@@ -15,8 +15,9 @@ module.exports = async (audio) => {
       content: audio,
     },
   };
+  const start = Date.now();
   const [response] = await client.recognize(request);
-  console.log(JSON.stringify(response, null, 2));
+  console.log(`Elapsed convert to text time: ${Date.now() - start} ms.`);
   return response.results
     .map((result) => result.alternatives[0].transcript)
     .join("\n");

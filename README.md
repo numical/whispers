@@ -21,6 +21,7 @@ The party game 'Chinese Whispers' with Google's speech API's.
 * [Where should I run my code?](https://www.youtube.com/watch?v=wzPmgWJ5fpU&feature=youtu.be)
 * _"definition of enterrpise - any environments where most of the applications do not have an applications team working
   on them"_
+* also https://cloud.google.com/serverless-options/   
   
 ## Function Spec
 ```mermaid
@@ -75,12 +76,6 @@ https://github.com/numical/whispers/
 6. [06-add-timings](https://github.com/numical/whispers/releases/tag/06_add_timings)
 7. [07-use-functions-framework-for-local-run](https://github.com/numical/whispers/releases/tag/07-use-functions-framework-for-local-run)
 
-### Possible Next Steps
-
-* evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
-* use [Google secrets](https://cloud.google.com/secret-manager) for configuration
-* understand connection details when using Cloud SQL etc.
-
 
 ### Conclusions
 
@@ -105,9 +100,25 @@ https://github.com/numical/whispers/
     * https://cloud.google.com/functions/docs/concepts/exec#auto-scaling_and_concurrency
     * https://cloud.google.com/functions/pricing
         * insanely cheap but inefficient
+    * [documentation](https://cloud.google.com/serverless-options/#advanced-tips-and-best-practices) on this issue very limited
     * solution?
         * https://www.nearform.com/blog/solving-the-serverless-concurrency-problem-with-google-cloud-run/
+
+### Possible Next Steps
+
+* evaluate utility of [functions framework](https://cloud.google.com/functions/docs/functions-framework)
+* use [Google secrets](https://cloud.google.com/secret-manager) for configuration
+* use [Cloud Endpoint](  https://cloud.google.com/endpoints/docs/openapi/get-started-cloud-functions) for custom domain
+* understand connection details when using Cloud SQL etc.
+
+### Resources
+* [Effective NodeJS Apps on Cloud Functions (recent Google blog post)](https://cloud.google.com/blog/products/serverless/running-effective-nodejs-apps-on-cloud-functions)
+* [Open Cloud Function Issues](https://issuetracker.google.com/savedsearches/559729)
+
     
 ## Cloud Run
 
 ... TBD
+
+* [pricing](https://cloud.google.com/run/pricing)
+* [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains)

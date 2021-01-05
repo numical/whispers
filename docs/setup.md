@@ -31,6 +31,7 @@ Funnies:
 ```
 gcloud iam service-accounts keys create ./auth/whispers-key.json --iam-account={project-name}@appspot.gserviceaccount.com
 ```
+* a 'funny': you cannot download that file again (see [Getting a service account key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys))
 
 ## Delete function
 ````

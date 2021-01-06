@@ -50,7 +50,7 @@ sequenceDiagram
 
 #### Base
 
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame
+    * https://europe-west2-numical-telephone.cloudfunctions.net/playGame
 
 #### Params
 
@@ -66,6 +66,7 @@ sequenceDiagram
 ### Source
 * gcp: [setup](./docs/setup.md);
 * javascript: https://github.com/numical/whispers/
+* logs (if you have permission): https://console.cloud.google.com/logs/query;query=logName%3D%22projects%2Fnumical-telephone%2Flogs%2Fcloudfunctions.googleapis.com%252Fcloud-functions%22
 
 #### History (tags)
 
@@ -81,6 +82,7 @@ sequenceDiagram
 ### Conclusions
 
 * straight-forward development
+    * with google sdk installed [mac install not so trivial](./docs/google-sdk-on-mac.md)
     * idiomatic code
     * some minor constraints
         * index.js at root

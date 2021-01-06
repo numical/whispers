@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({
-      error: JSON.stringify(err, null, 2),
+      error: err.toString(),
     });
   }
 };

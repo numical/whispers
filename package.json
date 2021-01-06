@@ -2,12 +2,13 @@
   "name": "whispers",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "express.js",
   "scripts": {
     "lint": "prettier --write src/**/*.js",
     "test": "tap src/**/*.test.js --no-coverage",
     "listVoices": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json && npx @google-cloud/functions-framework --target=listVoices",
     "playGame": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json && npx @google-cloud/functions-framework --target=playGame",
+    "express": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json && node express",
     "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
     "deploy:listVoices": "gcloud functions deploy listVoices --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
     "draw": "npx mmdc -i ./images/functional-spec.mmd -o ./images/functional-spec.png"
@@ -19,6 +20,7 @@
   "author": "mike.evans@numical.com",
   "license": "None",
   "devDependencies": {
+    "fast-crc32c": "^2.0.0",
     "@google-cloud/functions-framework": "^1.7.1",
     "mermaid.cli": "^0.5.1",
     "prettier": "^2.2.1",
@@ -29,7 +31,7 @@
     "@google-cloud/speech": "^4.1.5",
     "@google-cloud/storage": "^5.7.0",
     "@google-cloud/text-to-speech": "^3.1.3",
-    "fast-crc32c": "^2.0.0",
+    "express": "^4.17.1",
     "uuid": "^8.3.2"
   }
 }

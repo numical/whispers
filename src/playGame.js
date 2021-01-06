@@ -94,7 +94,7 @@ module.exports = async (req, res, mockObjects) => {
   } catch (err) {
     res.status(500);
     res.json({
-      error: JSON.stringify(err, null, 2),
+      error: err.toString(),
     });
   }
 };

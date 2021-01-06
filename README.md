@@ -76,7 +76,7 @@ sequenceDiagram
 5. [05_parametrised_plus_international](https://github.com/numical/whispers/releases/tag/05_parametrised_plus_international)
 6. [06-add-timings](https://github.com/numical/whispers/releases/tag/06_add_timings)
 7. [07-use-functions-framework-for-local-run](https://github.com/numical/whispers/releases/tag/07-use-functions-framework-for-local-run)
-
+8. [08-switch-gcp-project-and-docs](https://github.com/numical/whispers/releases/tag/08-switch-gcp-project-and-docs)
 
 ### Conclusions
 

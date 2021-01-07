@@ -37,3 +37,10 @@ gcloud iam service-accounts keys create ./auth/whispers-key.json --iam-account={
 ````
 gcloud functions delete playGame --region=europe-west2
 ````
+
+# Cloud Run
+
+## Set up project
+```
+gcloud services enable run.googleapis.com
+```

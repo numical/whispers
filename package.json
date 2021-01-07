@@ -1,7 +1,8 @@
 {
   "name": "whispers",
   "version": "0.1.0",
-  "description": "",
+  "description": "Chinese Whispers (aka Telephone) using Google speech API's",
+  "repository": "https://github.com/numical/whispers/",
   "main": "express.js",
   "scripts": {
     "lint": "prettier --write src/**/*.js",
@@ -9,7 +10,8 @@
     "listVoices": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json && npx @google-cloud/functions-framework --target=listVoices",
     "playGame": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json && npx @google-cloud/functions-framework --target=playGame",
     "express": "export GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json && node express",
-    "containerise": "docker build -t numical-telephone .",
+    "containerise:local": "docker build -t numical-telephone .",
+    "containerise:remote": "gcloud builds submit --tag gcr.io/numical-telephone/whispers && gcloud run deploy whispers --image gcr.io/numical-telephone/whispers --platform managed --allow-unauthenticated --region=europe-west2",
     "container": "docker run -p 8080:8080 --env GOOGLE_APPLICATION_CREDENTIALS=./auth/whispers-key.json numical-telephone",
     "deploy": "gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
     "deploy:listVoices": "gcloud functions deploy listVoices --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2",
@@ -20,7 +22,7 @@
     "cloud function"
   ],
   "author": "mike.evans@numical.com",
-  "license": "None",
+  "license": "NLPL",
   "devDependencies": {
     "fast-crc32c": "^2.0.0",
     "@google-cloud/functions-framework": "^1.7.1",

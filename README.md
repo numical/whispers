@@ -50,7 +50,7 @@ sequenceDiagram
 
 #### Base
 
-    * https://europe-west2-numical-telephone.cloudfunctions.net/playGame
+* https://europe-west2-numical-telephone.cloudfunctions.net/playGame
 
 #### Params
 
@@ -63,7 +63,7 @@ sequenceDiagram
 
 * https://europe-west2-numical-telephone.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
 
-### Source
+#### Source
 * gcp: [setup](./docs/setup.md);
 * javascript: https://github.com/numical/whispers/
 * logs (if you have permission): https://console.cloud.google.com/logs/query;query=logName%3D%22projects%2Fnumical-telephone%2Flogs%2Fcloudfunctions.googleapis.com%252Fcloud-functions%22
@@ -121,7 +121,27 @@ sequenceDiagram
     
 ## Cloud Run
 
-... TBD
+### URL's
 
+#### Base
+* https://whispers-jw74mcmvea-nw.a.run.app  
+
+#### API
+* https://whispers-jw74mcmvea-nw.a.run.app/playGame + params
+* https://whispers-jw74mcmvea-nw.a.run.app/listVoices
+
+### Additional Setup
+```
+gcloud services enable run.googleapis.com
+```
+
+### History (tags)
+9. [09_initial-cloud-run](https://github.com/numical/whispers/releases/tag/09-initial-cloud-run)
+
+### Conclusions
+* more flexible:
+  * "Service [whispers] revision [whispers-00001-noy] has been deployed and is serving 100 percent of traffic."
+
+### Resources
 * [pricing](https://cloud.google.com/run/pricing)
 * [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains)

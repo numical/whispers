@@ -1,0 +1,12 @@
+config:
+  target: "https://whispers-jw74mcmvea-nw.a.run.app"
+  phases:
+    - duration: 10
+      arrivalRate: 2
+scenarios:
+  - flow:
+    - get:
+        url: "/playGame"
+        qs:
+          iterations: 5
+          voice: "random"

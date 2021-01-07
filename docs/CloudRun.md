@@ -18,6 +18,7 @@ gcloud config set run/region europe-west2
 
 ## History (tags)
 9. [09_initial-cloud-run](https://github.com/numical/whispers/releases/tag/09-initial-cloud-run)
+10. [10_add_load_tests](https://github.com/numical/whispers/releases/tag/10_add_load_tests)
 
 ## Conclusions
 * mini-CI:  [cloud build triggers](https://cloud.google.com/cloud-build/docs/automating-builds/create-github-app-triggers)
@@ -26,6 +27,7 @@ gcloud config set run/region europe-west2
 * [concurrency](https://cloud.google.com/run/docs/about-concurrency)
   * `gcloud run services describe whispers`
   * `gcloud run services update whispers --concurrency 50`  
+  * see load tests
 
 ## Possible Next Steps
 * [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains)

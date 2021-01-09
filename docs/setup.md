@@ -45,4 +45,12 @@ gcloud functions delete playGame --region=europe-west2
 gcloud services enable run.googleapis.com
 gcloud config set run/platform managed
 gcloud config set run/region europe-west2
+
+## Delete function
+````
+## Delete function
+````
+gcloud run services delete whispers 
+````
+````
 ```

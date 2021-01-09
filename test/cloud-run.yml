@@ -1,5 +1,5 @@
 config:
-  target: "https://whispers-jw74mcmvea-nw.a.run.app"
+  target: "https://whispers-jw74mcmvea-ew.a.run.app"
   phases:
     - duration: 10
       arrivalRate: 2

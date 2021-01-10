@@ -1,6 +1,6 @@
 # google-sdk install (mac)
 
-(read from top to bottom, action form bottom to top)
+(read from top to bottom, action from bottom to top)
 
 ## google-sdk
 * download and extract

@@ -18,20 +18,20 @@
 * https://europe-west2-numical-telephone.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
 
 ### Source
-* gcp: [setup](./docs/setup.md);
+* gcp: [setup](./setup.md);
 * javascript: https://github.com/numical/whispers/
 * logs (if you have permission): https://console.cloud.google.com/logs/query;query=logName%3D%22projects%2Fnumical-telephone%2Flogs%2Fcloudfunctions.googleapis.com%252Fcloud-functions%22
 
 ### History (tags)
 
-1. [01_trivial_cloud_function](https://github.com/numical/whispers/releases/tag/01_trivial_cloud_function)
-2. [02_write_to_bucket](https://github.com/numical/whispers/releases/tag/02_write_to_bucket)
-3. [03_create_audio_file](https://github.com/numical/whispers/releases/tag/03_create_audio_file)
-4. [04_audio_to_text](https://github.com/numical/whispers/releases/tag/04_audio_to_text)
-5. [05_parametrised_plus_international](https://github.com/numical/whispers/releases/tag/05_parametrised_plus_international)
-6. [06-add-timings](https://github.com/numical/whispers/releases/tag/06_add_timings)
-7. [07-use-functions-framework-for-local-run](https://github.com/numical/whispers/releases/tag/07-use-functions-framework-for-local-run)
-8. [08-switch-gcp-project-and-docs](https://github.com/numical/whispers/releases/tag/08-switch-gcp-project-and-docs)
+1. [01_trivial_cloud_function](https://github.com/numical/whispers/tree/01_trivial_cloud_function)
+2. [02_write_to_bucket](https://github.com/numical/whispers/tree/02_write_to_bucket)
+3. [03_create_audio_file](https://github.com/numical/whispers/tree/03_create_audio_file)
+4. [04_audio_to_text](https://github.com/numical/whispers/tree/04_audio_to_text)
+5. [05_parametrised_plus_international](https://github.com/numical/whispers/tree/05_parametrised_plus_international)
+6. [06-add-timings](https://github.com/numical/whispers/tree/06_add_timings)
+7. [07-use-functions-framework-for-local-run](https://github.com/numical/whispers/tree/07-use-functions-framework-for-local-run)
+8. [08-switch-gcp-project-and-docs](https://github.com/numical/whispers/tree/08-switch-gcp-project-and-docs)
 
 ## Conclusions
 
@@ -42,9 +42,9 @@
         * index.js at root
         * no background processes
         * temp files in memory
-    * cold start considerations
+    * cold start considerations - **not** idiomatic
         * globals are good!
-        * https://www.youtube.com/watch?v=IOXrwFqR6kY
+        * [cloud performance atlas](https://www.youtube.com/watch?v=IOXrwFqR6kY)
 * unit testing fine
     * mocks for other services
 * deployment easy

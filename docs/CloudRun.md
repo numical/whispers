@@ -20,8 +20,8 @@ gcloud beta run domain-mappings create --service {service-name} --domain {domain
 ```
 
 ## History (tags)
-9. [09_initial-cloud-run](https://github.com/numical/whispers/releases/tag/09-initial-cloud-run)
-10. [10_add_load_tests](https://github.com/numical/whispers/releases/tag/10_add_load_tests)
+9. [09_initial-cloud-run](https://github.com/numical/whispers/tree/09-initial-cloud-run)
+10. [10_add_load_tests](https://github.com/numical/whispers/tree/10_add_load_tests)
 
 ## Conclusions
 * mini-CI:  [cloud build triggers](https://cloud.google.com/cloud-build/docs/automating-builds/create-github-app-triggers)
@@ -35,6 +35,7 @@ gcloud beta run domain-mappings create --service {service-name} --domain {domain
   * do not need a serverless [network endpoint group](https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts) or an https load balancer
   * _if_ in specific regions
   * https://wealthhealth.dev/
+* base unit for next onion ring
 
 ## Possible Next Steps
 * 

@@ -2,7 +2,6 @@
 
 A Google Cloud Platform (GCP) Playground  
 Discovering how to run Node.js.  
-The party game '[Chinese Whispers](https://en.wikipedia.org/wiki/Telephone_(game))' (in the US, 'telephone') with Google's speech API's.
 
 ## Options
 
@@ -25,7 +24,10 @@ The party game '[Chinese Whispers](https://en.wikipedia.org/wiki/Telephone_(game
 ## Another Viewpoint - the GCP onion
 ![GCP Onion](./images/gcp-onion.png)
 
-## Function Spec
+## Functional Spec
+The party game '[Chinese Whispers](https://en.wikipedia.org/wiki/Telephone_(game))' (in the US, 'telephone') with Google's speech API's.
+
+
 (Generated with [mermaid.js](https://mermaid-js.github.io/mermaid/#/) - if you see markdown rather than a diagram, [click here](./images/functional-spec.png))
 ```mermaid
 sequenceDiagram

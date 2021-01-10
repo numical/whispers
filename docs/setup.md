@@ -15,8 +15,6 @@ gsutil mb -l europe-west2 -b on gs://{bucket-name}
 gsutil iam ch allUsers:objectViewer gs://{bucket-name}
 ````
 
-gcloud beta billing projects link numical-telephone --billing-account=0118EE-C0AC1A-AB5E21
-
 
 
 ## Export function
@@ -54,3 +52,4 @@ gcloud run services delete whispers
 ````
 ````
 ```
+

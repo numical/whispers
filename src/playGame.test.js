@@ -87,6 +87,6 @@ test("play game but errors", async (t) => {
   td.when(convertToAudio(text, defaultVoice)).thenReject(new Error());
   await playGame(req, res, { gameId: "testGameId2", timings: Timings.DUMMY });
   td.verify(res.status(500));
-  td.verify(res.json({ error: "{}" }));
+  td.verify(res.json({ error: "Error"}));
   t.end();
 });

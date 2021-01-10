@@ -6,8 +6,7 @@ The party game '[Chinese Whispers](https://en.wikipedia.org/wiki/Telephone_(game
 
 ## Options
 
-![xAAS Comparison](/images/cloud-service-types.png)
-
+![xAAS Comparison](./images/cloud-service-types.png)
 * src: https://www.edureka.co/blog/what-is-google-cloud-platform/
 
 | GCP product | Type | Unit | Abstraction level | Usage | Billing | Project focus |
@@ -22,7 +21,10 @@ The party game '[Chinese Whispers](https://en.wikipedia.org/wiki/Telephone_(game
 * _"definition of enterrpise - any environments where most of the applications do not have an applications team working
   on them"_
 * also https://cloud.google.com/serverless-options/   
-  
+
+## Another Viewpoint - the GCP onion
+![GCP Onion](./images/gcp-onion.png)
+
 ## Function Spec
 (Generated with [mermaid.js](https://mermaid-js.github.io/mermaid/#/) - if you see markdown rather than a diagram, [click here](./images/functional-spec.png))
 ```mermaid

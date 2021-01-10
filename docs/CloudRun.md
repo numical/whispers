@@ -41,6 +41,8 @@ gcloud beta run domain-mappings create --service {service-name} --domain {domain
 
 ## Resources
 * [pricing](https://cloud.google.com/run/pricing)
+* [unofficial cloud run faq](https://github.com/ahmetb/cloud-run-faq)
+* [curated list of cloud run resources](https://github.com/steren/awesome-cloudrun)
 
 
 [(back to README)](../README.md)

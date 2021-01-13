@@ -34,11 +34,8 @@ gcloud beta run domain-mappings create --service {service-name} --domain {domain
 * [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains)
   * do not need a serverless [network endpoint group](https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts) or an https load balancer
   * _if_ in specific regions
-  * https://wealthhealth.dev/
+  * but very faffy and cannot use apex domain
 * base unit for next onion ring
-
-## Possible Next Steps
-* 
 
 ## Resources
 * [pricing](https://cloud.google.com/run/pricing)

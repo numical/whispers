@@ -64,6 +64,7 @@
 ## Possible Next Steps
 
 * use [Cloud Tasks](https://cloud.google.com/tasks) for bucket writes to shorten response *if* they are critical path
+  * update: they are **not**; they are the fastets AOI call - 9 ms vs 100's ms for text-to-speech 
 * use [Google secrets](https://cloud.google.com/secret-manager) for configuration
 * use [Cloud Endpoint](  https://cloud.google.com/endpoints/docs/openapi/get-started-cloud-functions) for custom domain
 * understand connection details when using Cloud SQL etc.

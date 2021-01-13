@@ -50,4 +50,10 @@ sequenceDiagram
 
 ## [Cloud Functions](./docs/CloudFunctions.md)
 
+### But concurrency issues lead to...
+
 ## [Cloud Run](./docs/CloudRun.md)
+
+### So now let's tie this into a website...
+
+## [Static Website](./docs/StaticWebsite.md)

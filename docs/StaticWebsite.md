@@ -3,6 +3,7 @@ How to set up a static website on GCP.
 
 ## History (tags)
 11. [11_HTTPS_website](https://github.com/numical/whispers/tree/11_HTTPS_websiteHTTPS)
+12. [12_integrate_cloud_run](https://github.com/numical/whispers/tree/12_integrate_cloud_run)
 
 
 ## 1. Simple bucket

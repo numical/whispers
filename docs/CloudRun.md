@@ -1,19 +1,20 @@
 # Cloud Run
 
 ## URL's
+(will not run from tag 12 onwards as ingress restrictions added)
 
 ### Base
-* https://whispers-jw74mcmvea-ew.a.run.app  
+* https://whispers-5lblqp2zha-ew.a.run.app  
 
 ### API
-* https://whispers-jw74mcmvea-ew.a.run.app/playGame + params
-* https://whispers-jw74mcmvea-ew.a.run.app/listVoices
+* https://whispers-5lblqp2zha-ew.a.run.app/playGame + params
+* https://whispers-5lblqp2zha-ew.a.run.app/listVoices
 
 ## Additional Setup
 ```
 gcloud services enable run.googleapis.com
 gcloud config set run/platform managed
-gcloud config set run/region europe-west2
+gcloud config set run/region europe-west1
 
 gcloud domains list-user-verifiedg
 gcloud beta run domain-mappings create --service {service-name} --domain {domain-name}
@@ -36,6 +37,8 @@ gcloud beta run domain-mappings create --service {service-name} --domain {domain
   * _if_ in specific regions
   * but very faffy and cannot use apex domain
 * base unit for next onion ring
+* containers go into repo `gcr.io/{project-name}`
+  * so `gcloud container images list --repository=gcr.io/{project-name}`
 
 ## Resources
 * [pricing](https://cloud.google.com/run/pricing)

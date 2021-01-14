@@ -2,12 +2,12 @@
 How to set up a static website on GCP.
 
 ## History (tags)
-11. [11_HTTPS_website](https://github.com/numical/whispers/tree/11_HTTPS_website)
+11. [11_HTTPS_website](https://github.com/numical/whispers/tree/11_HTTPS_websiteHTTPS)
 
 
 ## 1. Simple bucket
 ```shell
-gsutil mb -l europe-west2 -b on gs://{bucket-name}
+gsutil mb -l europe-west1 -b on gs://{bucket-name}
 gsutil iam ch allUsers:objectViewer gs://{bucket-name}
 ```
 * gives a URL of form https://storage.googleapis.com/{bucket-name}/{file-name}
@@ -30,9 +30,17 @@ gsutil iam ch allUsers:objectViewer gs://{bucket-name}
   
 ### Setup (from scratch):
 ```
-gcloud projects create spike-https-website --organization=379324684039
-gcloud config set project spike-https-website
-$gcloud beta billing projects link spike-https-website --billing-account=0118EE-C0AC1A-AB5E21
+
+// do config
+
+gcloud projects create {project-name} --organization=379324684039
+gcloud config set project {project-name}
+$gcloud beta billing projects link {project-name} --billing-account=0118EE-C0AC1A-AB5E21
+
+gcloud config configurations create {configuration-name}
+gcloud config set project {project-name}
+gcloud config set compute/region europe-west1
+gcloud config set compute/zone europe-west1-a
 
 gsutil mb -l europe-west1 -b on gs://www.wealthhealth.dev
 gsutil iam ch allUsers:legacyObjectReader gs://www.wealthhealth.dev
@@ -98,4 +106,21 @@ gcloud compute target-https-proxies delete wealthhealth-load-balancer-target-pro
 gcloud compute url-maps delete wealthhealth-load-balancer
 gcloud compute backend-buckets delete wealthhealth-bucket
 gcloud compute ssl-certificates delete wealthhealth-certificate
+gcloud compute addresses delete wealthhealth-address --global
 ```
+
+## 4: Integrate Cloud Run
+```
+gcloud compute network-endpoint-groups create whispers-network-endpoint-group --network-endpoint-type=serverless --cloud-run-service=whispers --region=europe-west1
+gcloud compute backend-services create whispers-backend-service --global 
+gcloud compute backend-services add-backend whispers-backend-service --global --network-endpoint-group=whispers-network-endpoint-group --network-endpoint-group-region=europe-west1
+gcloud compute url-maps add-path-matcher wealthhealth-load-balancer --path-matcher-name=whispers-path-matcher --default-backend-bucket=wealthhealth-bucket --backend-service-path-rules='/whispers/*=whispers-backend-service' --global
+
+To delete:
+gcloud compute url-maps remove-path-matcher wealthhealth-load-balancer --path-matcher-name=whispers-path-matcher
+```
+* note: fiddly with regions vs global and ports/protocols
+* TODO's:
+  * how remove '/whispers' sub-domain on cloud run container?
+  * stop direct access to cloud run container - [ingress rules?](https://cloud.google.com/run/docs/securing/ingress#command-line)
+

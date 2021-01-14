@@ -1,12 +1,12 @@
 config:
-  target: "https://europe-west2-numical-telephone.cloudfunctions.net"
+  target: "https://wealthhealth.dev"
   phases:
     - duration: 10
       arrivalRate: 2
 scenarios:
   - flow:
     - get:
-        url: "/playGame"
+        url: "/whispers/playGame"
         qs:
           iterations: 5
           voice: "random"

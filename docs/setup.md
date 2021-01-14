@@ -11,15 +11,15 @@ gcloud services enable cloudfunctions.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
 gcloud services enable texttospeech.googleapis.com
 gcloud services enable speech.googleapis.com
-gsutil mb -l europe-west2 -b on gs://{bucket-name}
-gsutil iam ch allUsers:objectViewer gs://{bucket-name}
+gsutil mb -l europe-west1 -b on gs://{bucket-name}
+gsutil iam ch allUsers:legacyObjectReader gs://{bucket-name}
 ````
 
 
 
 ## Export function
 ````
-gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west2
+gcloud functions deploy playGame --runtime nodejs12 --trigger-http --allow-unauthenticated  --region=europe-west1
 ````
 Funnies:
 * `--source` must be *root* of all local files, no peer sources allowed;
@@ -33,7 +33,7 @@ gcloud iam service-accounts keys create ./auth/whispers-key.json --iam-account={
 
 ## Delete function
 ````
-gcloud functions delete playGame --region=europe-west2
+gcloud functions delete playGame --region=europe-west1
 ````
 
 # Cloud Run
@@ -42,7 +42,7 @@ gcloud functions delete playGame --region=europe-west2
 ```
 gcloud services enable run.googleapis.com
 gcloud config set run/platform managed
-gcloud config set run/region europe-west2
+gcloud config set run/region europe-west1
 
 ## Delete function
 ````

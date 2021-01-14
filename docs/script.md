@@ -27,7 +27,7 @@
     * [locally](https://github.com/numical/whispers/blob/04_audio_to_text/src/whisper.js)
       * mock side effects (google api calls)
       * `npm run test`  
-    * [in cloud](https://console.cloud.google.com/functions/details/europe-west2/playGame?project=numical-whispers&tab=testing)
+    * [in cloud](https://console.cloud.google.com/functions/details/europe-west1/playGame?project=numical-whispers&tab=testing)
     * locally using [functions framework](https://cloud.google.com/functions/docs/functions-framework)
       * `npm run playGame`
   * deploy

@@ -4,23 +4,23 @@
 
 ### Base
 
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame
+* https://europe-west1-numical-whispers.cloudfunctions.net/playGame
 
 ### Params
 
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?iterations=5
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?text=She%20sells%20sea%20shells%20on%20the%20sea%20shore
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?voice=english
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?voice=random
+* https://europe-west1-numical-whispers.cloudfunctions.net/playGame?iterations=5
+* https://europe-west1-numical-whispers.cloudfunctions.net/playGame?text=She%20sells%20sea%20shells%20on%20the%20sea%20shore
+* https://europe-west1-numical-whispers.cloudfunctions.net/playGame?voice=english
+* https://europe-west1-numical-whispers.cloudfunctions.net/playGame?voice=random
 
 ### All Together
 
-* https://europe-west2-numical-telephone.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
+* https://europe-west1-numical-whispers.cloudfunctions.net/playGame?iterations=5&text=round%20the%20rugged%20rock%20the%20ragged%20rascal%20ran&voice=random
 
 ### Source
 * gcp: [setup](./setup.md);
 * javascript: https://github.com/numical/whispers/
-* logs (if you have permission): https://console.cloud.google.com/logs/query;query=logName%3D%22projects%2Fnumical-telephone%2Flogs%2Fcloudfunctions.googleapis.com%252Fcloud-functions%22
+* logs (if you have permission): https://console.cloud.google.com/logs/query;query=logName%3D%22projects%2Fnumical-whispers%2Flogs%2Fcloudfunctions.googleapis.com%252Fcloud-functions%22
 
 ### History (tags)
 

@@ -18,7 +18,8 @@
     "containerise:remote": "gcloud builds submit --tag gcr.io/numical-whispers/whispers && gcloud beta run deploy whispers --image gcr.io/numical-whispers/whispers --platform managed --allow-unauthenticated --region=europe-west1 --memory=256Mi --ingress=internal-and-cloud-load-balancing",
     "loadtest:cloud-functions": "artillery run ./test/cloud-functions.yml",
     "loadtest:cloud-run": "artillery run ./test/cloud-run.yml",
-    "draw": "npx mmdc -i ./images/functional-spec.mmd -o ./images/functional-spec.png"
+    "draw": "npx mmdc -i ./images/functional-spec.mmd -o ./images/functional-spec.png",
+    "website:update": "gsutil -m rsync -r -d public gs://www.wealthhealth.dev"
   },
   "keywords": [
     "gcp",

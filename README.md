@@ -57,3 +57,7 @@ sequenceDiagram
 ### So now let's tie this into a website...
 
 ## [Static Website](./docs/StaticWebsite.md)
+
+### But all the options above are compromise of one sort or another; however...
+
+## [GCP - it's nearly free](./docs/NearlyFree.md)

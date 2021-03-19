@@ -7,7 +7,7 @@
 * looked at [Cloud Functions](./CloudFunctions.md) and [Cloud Run](./CloudRun.md)
 * came decisively down on the Cloud Run side
 
-### [Demo]((https://wealthhealth.dev/whispers))
+### [Chinese Whispers Demo]((https://wealthhealth.dev/whispers))
 ![Serverless Spike](../images/functional-spec.png)
 
 # Can I build _and run_ a fully fledged web proposition for free on GCP?
@@ -61,7 +61,11 @@
 * Firestore for free data storage
   * not much but enough and then cheap
 * [Integrate with Cloud Run](https://firebase.google.com/docs/hosting/cloud-run)  for functionality
-* [demo](https://finances.page/)
+
+
+### [Demo - stateless server](https://finances.page/)
+* [sequence diagrams](./stateless-server-sequence-diagrams.md)
+* detail unimportant, but a **real** app
 
 ### Downsides
 * dumbed down so, conversely, unintuitive, e.g:

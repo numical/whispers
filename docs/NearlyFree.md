@@ -12,6 +12,12 @@
 
 # Can I build _and run_ a fully fledged web proposition for free on GCP?
 
+## Use Case
+* web app 
+* 1000 users
+* 1 visit per user per month
+* 1 MB per visit
+
 ## Free Stuff
 * [Free Tier Products](https://cloud.google.com/free)
 * have to consider why do Google do this
@@ -19,6 +25,9 @@
   
 ## Compute OK
 * compute - OK
+* costs
+  * [usage > provisioning](https://youtu.be/N2OG1w6bGFo?t=783)
+* reliability  
   * taking a look at the GCP Onion:
     ![GCP Onion](../images/gcp-onion.png)
 
@@ -47,12 +56,15 @@
 | GCP product | Type | Unit | Abstraction level | Usage | Billing | Project focus |
 | --- | --- | --- | --- | --- | --- | --- |
 | App Engine | PAAS  | app | code, http requests | web applications | usage | dev |
+* old, original product - no longer free!
 
 ####And Then:
 
 | GCP product | Type | Unit | Abstraction level | Usage | Billing | Project focus |
 | --- | --- | --- | --- | --- | --- | --- |
 | Firebase | All-in-one  | app | app | mobile applications | usage | dev |
+* generous ['Spark' plan](https://firebase.google.com/pricing/)
+* even [free CDN](https://firebase.google.com/products/hosting/)
 
 ### Mix'n'match
 * Firebase for free stuff:
@@ -80,6 +92,13 @@
 ### Surprise Upsides
 * auto-config cloud run instances using [realtime updates](https://firebase.google.com/docs/firestore/query-data/listen)
 * easy unit testing as Collections auto-created
+* can set quotas - weird - through google concole / app engine / quotas
+
+## This is too limited a use case!
+* multi-national storage:
+  * egress more significant: CDN > multi-regional buckets > duplicated buckets
+* reduce compute cost
+  * load balancer + pre-emptive instances
 
 ## If You're Not Convinced
 https://www.nearlyfreespeech.net/
